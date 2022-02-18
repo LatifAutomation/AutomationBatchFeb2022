@@ -1,0 +1,71 @@
+Navigation()
+
+
+1.navigate().To(String arg)
+
+2.navigate().back()
+
+
+
+1.open amazon---> driver.navigate().to("")
+2.title print ---> getTitle()
+3.url print  -----> getCurrentURL()
+4.open facebook
+5.title print     getTitle()
+6.url print       getCurrentURL()
+7.naviagte back to the amazon application  navigate().back()
+8.print the title
+9.print the url
+10.close the window
+
+
+
+
+3. navigate().forward
+
+Print the title.
+Print the Current URL
+
+*******************************************************************
+
+
+Assignment 1
+
+
+1. Open Shadi.com by using get method
+2. Maximize the window
+3. Print the title.
+4. Print the Current URL
+5. Open Flipcart application by using navigate().to()
+6. Print the title.
+7. Print the Current URL
+8. Naviagate back
+9. Print the title.
+10 Print the Current URL
+11.Naviagte forward
+12.Print the title.
+13.Print the Current URL
+14.Refresh the page
+15.Print the title.
+16.Print the Current URL
+17.close the browser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
