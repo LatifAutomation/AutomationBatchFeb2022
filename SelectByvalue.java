@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class SelectByvalue {
+public class SelectByvalue extends ReusableMethods
+
+{
 
 	public static void main(String[] args) throws InterruptedException
 	{
@@ -18,16 +20,11 @@ public class SelectByvalue {
 		
 		WebElement dropd = driver.findElement(By.id("searchDropdownBox"));
 		
-		//craete the object of select vlass
+		ReusableMethods ru=new ReusableMethods();
+		ru.selectByIndex(dropd, 0);
+		ru.selectByvalue(dropd, "search-alias=lawngarden");
+		ru.selectByVisibleText(dropd, "Luggage & Bags");
 		
-		Select sel=new Select(dropd);
-		
-		//Perform the action
-		
-		sel.selectByValue("search-alias=electronics");
-		Thread.sleep(3000);
-		
-		sel.selectByValue("search-alias=hpc");
 		
 
 	}
