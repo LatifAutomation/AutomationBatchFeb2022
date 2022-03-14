@@ -1,0 +1,83 @@
+Alerts and popup
+
+1. Hidden division popup
+
+2. Authentication popup
+
+
+   1. we cant inspect
+
+
+   2. we cant drag and drop
+   
+   3. it is colorfull.
+
+
+
+
+https://the-internet.herokuapp.com/basic_auth
+
+https://username:password@the-internet.herokuapp.com/basic_auth
+
+
+pass the usernamne and password to the url.
+
+
+
+3. Alert popup/confirmation
+
+
+
+1. we cant inspect
+
+
+2. we cant drag and drop
+
+3. It will consist Ok and cancel button
+
+
+
+Alert alt=driver.switch.to().alert()
+
+switch.To().alert()
+
+
+
+void accept()-------> OK
+
+
+void dismiss()------> click on cancel
+
+
+void getText()-------> Alert text
+
+
+
+5. Windows popup/ child browser popup
+
+
+
+1. We can inspect
+
+2. We can drag and drop
+
+3. It will be colorfull
+
+4. It will contains minimize, maximize and close option
+
+
+
+getWindowHandle(): reference Id of parent window
+
+
+getWindowhandles():reference Id of parent as well as child
+
+
+
+
+
+
+
+
+
+
