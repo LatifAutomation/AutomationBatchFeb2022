@@ -1,13 +1,15 @@
 package TestNGPackage;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class FirstClass 
 
 {
  
-	@Test()
+	
 	
 	public void first()
 	{
@@ -23,8 +25,12 @@ public class FirstClass
 		System.out.println(" I am in second test case");
 	}
 	
+	@AfterTest
+	public void aftertest()
+	{
+		System.out.println(" I am in after Test");
+	}
 	
-	@Test
 	public void third()
 	{
 		System.out.println(" I am in third Test case");
@@ -44,4 +50,10 @@ public class FirstClass
 		System.out.println(" I am in five Test case");
 	}
 	
+	
+	@BeforeSuite
+	public void beforesuite()
+	{
+		System.out.println(" I am in before suite method");
+	}
 }
