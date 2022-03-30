@@ -1,36 +1,56 @@
-package pageFactory;
+package PageFatory_TestNG;
+
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-public class TestClass {
+public class TestClass
+{
 
-	public static void main(String[] args) 
+	WebDriver driver;
+	
+	@BeforeTest
+	public void setup()
 	{
-		ChromeOptions handlingSSL = new ChromeOptions();
-
-		//Using the accept insecure cert method with true as parameter to accept the untrusted certificate
-		handlingSSL.setAcceptInsecureCerts(true);
-				
-		//Creating instance of Chrome driver by passing reference of ChromeOptions object
-		WebDriver driver = new ChromeDriver(handlingSSL);
-		
-		
-		
-		driver.get("https://demoqa.com/login");
+		driver=new ChromeDriver();
+		driver.get("https://www.browserstack.com/");
 		driver.manage().window().maximize();
-		
-		
-		LoginPage lp=new LoginPage(driver);
-		
-		lp.login("testuser234", "Test@1234");
-		
-		Profile p=new Profile(driver);
-		//p.verifyUser("testuser234");
-		p.logoutclick();
-		
+		driver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
 		
 	}
-
+	
+	
+	@Test(priority=0)
+	public void HomePageTestcase()
+	{
+		HomePage hp=new HomePage(driver);
+		hp.headerVerify();
+		hp.signupclick();
+	}
+	
+	
+	@Test(priority=1)
+	public void SignUpTestCase() throws InterruptedException
+	{
+		SignUppage sp=new SignUppage(driver);
+		sp.fullnameEnter();
+		sp.EmailEnter();
+		sp.passwordEnter();
+		Thread.sleep(300);
+		sp.chckbxclick();
+		sp.signUpClick();
+		
+	}
+	
+	@AfterTest
+	public void close()
+	{
+		driver.close();
+	}
+	
+	
 }
